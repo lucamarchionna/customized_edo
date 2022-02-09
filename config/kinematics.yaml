@@ -1,0 +1,5 @@
+edo:
+  kinematics_solver: edo_edo/IKFastKinematicsPlugin
+  kinematics_solver_search_resolution: 0.005
+  kinematics_solver_timeout: 0.005
+

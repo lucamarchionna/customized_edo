@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="sim" default="false" />
+
+  <node name="servo_server" pkg="moveit_servo" type="servo_server" output="screen" >
+    <rosparam command="load" file="$(find customized_edo)/config/edo_simulated_config.yaml" if="$(arg sim)"/>
+    <rosparam command="load" file="$(find customized_edo)/config/edo_real_config.yaml" unless="$(arg sim)"/>
+  </node>
+
+</launch>
+
